@@ -1,0 +1,21 @@
+ body{
+     background-image: url('./images/2110.w023.n001.1174B.p1.1174.jpg'); 
+     background-size: contain;
+
+    background-size: cover;
+    background-color: palevioletred;
+}
+.in{
+    background-color: rgba(27, 26, 26, 0.1);
+    backdrop-filter: blur(10px);
+    
+    color: #ffffff;
+}
+   
+
+.try{
+    background-color: rgba(27, 26, 26, 0.1);
+    backdrop-filter: blur(10px);
+    
+    color: #ffffff;
+}

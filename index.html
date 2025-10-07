@@ -6,6 +6,51 @@
     <title>weatherapi</title>
 </head>
 <body>
-    
+    <input type="text"placeholder="enter the location" id="inputLocation">
+    <button type="button" onclick="findWeather()">search</button>
+    <div id="output " class="container">
+
+    </div>
 </body>
+<script>
+    const findWeather =async ()=>{
+        const inputloc=inputLocation.value
+        console.log(inputloc)
+        try{
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputloc}&appid=8ac5c4d57ba6a4b3dfcf622700447b1e&units=metric`)
+            console.log(response)
+            if(response.status!=200){
+                alert("Enter a valid city name")
+                inputLocation.value=''
+
+            }
+            const result=await response.json()
+            console.log(result)
+            const temp= result.main.temp
+            console.log(temp)
+            const humidity=result.main.humidity
+            console.log(humidity)
+            const pressure=result.main.pressure
+            console.log(pressure)
+            const locname=result.name
+            console.log(locname)
+            const country=result.sys.country
+            console.log(country)
+            const weatherdata=Object.values(result.weather[0])
+            console.log(weatherdata[1],weatherdata[2])
+        
+          
+        }catch(error){
+            alert("error while fetching")
+        }
+    }
+    const gettime=()=>{
+        const now=new Date()
+       console.log(now)
+    }
+        
+
+
+    
+</script>
 </html>
