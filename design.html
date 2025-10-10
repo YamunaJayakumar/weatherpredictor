@@ -11,10 +11,11 @@
 <body>
     <div class="container">
         <div class="row ">
-            <div class="col-12 border d-flex in  my-2" style="padding:6rem; border-radius: 1.5rem;">
+            <div class="col-12 d-flex  gap-2 in p-5  my-5" style="padding:6rem; border-radius: 1.5rem;">
                 <input type="text" class="form-control " placeholder="enter the city name" id="inputLocation">
-                <button type="button" class="btn btn-primary"onclick="findWeather()">search</button>
+                <button type="button" class="btn border text-light"onclick="findWeather();gettime()">search</button>
             </div>
+           
         </div>
         <div class="row " id="output">
             <!-- <div class="col-3 ms-1 me-5">
@@ -96,9 +97,10 @@
             console.log(weatherdata[1],weatherdata[2])
             document.getElementById("output").innerHTML=`
             <div class="col-3 ms-1 me-5">
-                <div class="row border mb-4 text-center try" style="padding:5rem 5rem ; border-radius: 1.5rem;">
+                <div class="row  mb-4 text-center try" style="padding:5rem 5rem ; border-radius: 1.5rem;">
                     <div class="humidity border-bottom  ">
-                        <h3>${weatherdata[1]}<i class="fa-solid fa-cloud"></i></h3>
+                        <h4><i class="fa-solid fa-cloud"></i><br>
+                            ${weatherdata[1]}</h4>  
                     </div>
                     <div class="humidity-content  ">
                         <h6>${weatherdata[2]}</h6>
@@ -107,9 +109,10 @@
                     </div>
                     
                 </div>
-                <div class="row border  text-center try d-flex flex-column " style="padding:5rem 5rem;border-radius: 1.5rem;"> 
+                <div class="row   text-center try d-flex flex-column " style="padding:5rem 5rem;border-radius: 1.5rem;"> 
                     <div class="humidity border-bottom">
-                        <h3>Pressure</h3>
+                        <h4><i class="fa-solid fa-gauge"></i><br>
+                            Pressure</h4>
                     </div>
                     <div class="humidity-content  ">
                         <h6>${pressure}</h6>
@@ -118,31 +121,32 @@
                 </div>
             </div>
             <div class="col-3 me-5">
-                <div class="row border mb-4  text-center try" style="padding:5rem 5rem; border-radius: 1.5rem;">
+                <div class="row  mb-4  text-center try" style="padding:5rem 5rem; border-radius: 1.5rem;">
                     <div class="humidity border-bottom">
-                        <h3>temperature</h3>
+                        <h4><i class="fa-solid fa-temperature-half"></i> <br>
+                            Temperature</h4>
                     </div>
                     <div class="humidity-content ">
                         <h6>${temp}&#8451</h6>
                     </div>
                 </div>
-                <div class="row border text-center try" style="padding:5rem 5rem ; border-radius: 1.5rem;"> 
+                <div class="row  text-center try" style="padding:5rem 5rem ; border-radius: 1.5rem;"> 
                     <div class="humidity border-bottom">
-                        <h3>Humidity</h3>
+                        <h4><i class="fa-solid fa-droplet"></i> <br>
+                            Humidity</h4>
                     </div>
                     <div class="humidity-content ">
-                        <h6>${temp}</h6>
+                        <h6>${humidity}</h6>
                     </div> </div>
             </div>
-            <div class="col-5 me-2 border try d-flex flex-column align-items-end justify-content-top"style="border-radius: 1.5rem;">
-                <div class="name  text-center p-2 my-2 w-100">
-                    <h1>${locname}</h1>
+            <div class="col-5 me-2 try firstdiv "style="border-radius: 1.5rem;" >
+                <div class="name  text-center  w-100">
+                    <h1><i class="fa-solid fa-location-dot"></i>${locname}</h1>
                 </div>
-                <div class="temp  text-center p-2 w-100 ">
-                    <h3>${temp}&#8451</h3>
+                <div class="temp  text-center  w-100 ">
+                    <h3><i class="fa-solid fa-temperature-half"></i>${temp}&#8451</h3>
                 </div>
-                
-            </div>
+               
         
             `
 
@@ -152,12 +156,7 @@
             alert("error while fetching",error)
         }
     }
-    const gettime=()=>{
-        const now=new Date()
-       console.log(now)
-    }
-        
-
+    
 
     
 </script>

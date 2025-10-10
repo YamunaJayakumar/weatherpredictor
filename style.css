@@ -1,21 +1,31 @@
  body{
-     background-image: url('./images/2110.w023.n001.1174B.p1.1174.jpg'); 
+     /* background-image: url('./images/2110.w023.n001.1174B.p1.1174.jpg'); 
      background-size: contain;
-
-    background-size: cover;
-    background-color: palevioletred;
+    background-size: cover; */
+    background-color: rgb(4, 5, 41);
+    
 }
 .in{
-    background-color: rgba(27, 26, 26, 0.1);
+   background-color: rgba(90, 86, 86, 0.2);
     backdrop-filter: blur(10px);
-    
     color: #ffffff;
 }
    
 
 .try{
-    background-color: rgba(27, 26, 26, 0.1);
-    backdrop-filter: blur(10px);
-    
+    background-color: rgba(90, 86, 86, 0.2);
+    backdrop-filter: blur(5px);
+    font-weight: 700;
     color: #ffffff;
+}
+.firstdiv{
+    display:flex;
+    flex-direction: column;
+   justify-content:center;
+   align-items:center;
+   text-align: center;
+   gap:2rem;
+   
+  
+
 }
