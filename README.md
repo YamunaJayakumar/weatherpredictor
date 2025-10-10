@@ -27,7 +27,8 @@ The app allows users to search for a city and view live weather data including t
 - Bootstrap 5  
 - Font Awesome icons  
 - OpenWeatherMap API  
-
+## LiveDemo
+https://api-weahterapp.netlify.app/
 ---
 
 
